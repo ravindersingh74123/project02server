@@ -1,0 +1,871 @@
+
+*{
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  
+}
+.login{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+.home-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-image: linear-gradient(to right, #e4c8c8, #3a1c71);
+  background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+  display: cover;
+  margin: 0;
+  padding: 0;
+  
+  gap: 20px;
+ 
+}
+.server {
+  width: 350px;
+  height: 350px;
+  background-color: rgb(53, 58, 59);
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  /* justify-content: space-around;
+  align-items: center; */
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  transition: transform 0.3s ease;
+  position: relative;
+  font-size: 30px;
+}
+.server:hover {
+  transform: translateY(-5px);
+}
+.photo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+
+}
+.jai{
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+  width: 280px;
+  transform: translate(-5px);
+}
+.jai2{
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+  width: 280px;
+  transform: translate(-5px);
+}
+
+.papa{
+  width: 260px;
+  
+}
+.filmeba{
+  width: 260px;
+}
+.custom-file-input {
+  /* Set the styles for the custom button */
+  background-color: #4CAF50; /* Green */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Hide the default file input */
+.hidden-input {
+  display: none;
+}
+
+/* Add hover effect */
+.custom-file-input:hover {
+  background-color: #45a049; /* Darker shade of green */
+}
+
+
+/* Styles for the file input */
+.inphoto {
+  display: block; /* Ensures the input takes up the full width available */
+  margin-bottom: 10px; /* Adjust margin as needed */
+  padding: 8px; /* Adjust padding as needed */
+  border: 1px solid #ccc; /* Border style */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Adjust font size as needed */
+  width: 100%; /* Ensures the input takes up the full width available */
+  box-sizing: border-box; /* Includes padding and border in the width */
+}
+
+
+/* Styles for the submit button */
+.inbtn {
+  background-color: #007bff; /* Change color as needed */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.inbtn:hover {
+  background-color: #0056b3; /* Change color as needed */
+}
+
+.post{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+  font-size: 40px;
+  padding-top: 0px;
+  margin-top: 0px;
+  transform: translate(-1px);
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+ 
+}
+.ptani{
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+ 
+}
+.ptani2{
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
+.card {
+  width: 350px;
+  height: 350px;
+  background-color: rgb(139, 178, 190);
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-around;
+  align-items: center; */
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card p {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Pacifico', cursive;
+}
+
+.card button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #000000;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Roboto', sans-serif;
+}
+
+.card button:hover {
+  background-color: #000000;
+}
+
+/* .sidebar-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 300px;
+  background-color: #f0f0f0;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+.sidebar-content {
+  padding: 20px;
+}
+
+.sidebar-content h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'Pacifico', cursive;
+}
+
+.messages-column {
+  margin-top: auto; 
+}
+
+.chat-messages {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.message {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #e5f5e9;
+  border-radius: 8px;
+}
+
+.message p {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.message .sender {
+  font-weight: bold;
+} */
+
+.user-info {
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  padding: 20px;
+  font-family: 'Pacifico', cursive;
+ 
+}
+
+.lost-item {
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+  /* transform: translate(0,60px); */
+}
+
+.chat-button {
+  /* position: absolute; */
+  bottom: 0;
+  right: 0;
+  height: 40px;
+  width: 70px;
+  margin: 10px;
+  padding: 8px 16px;
+  background-color: #000000;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Roboto', sans-serif;
+}
+
+.chat-button:hover {
+  background-color: #000000;
+}
+
+
+
+
+.user-details {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 200px;
+  background-color: white;
+  border: 1px solid black;
+  text-decoration-color: #000000;
+  padding: 10px;
+  display: none; /* Initially hide user details */
+}
+
+.card:hover .user-details {
+  display: block; /* Show user details when hovering over the card */
+}
+
+.add-sidebar-button {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #a44f4f;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.new-ui {
+  display: flex;
+
+  height: 100%;
+  background-image: linear-gradient(to right, #e4c8c8, #3a1c71);
+  background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+  display: cover;
+  margin: 0;
+  padding: 0;
+
+
+}
+
+.sidebar {
+  
+  width: 250px;
+  /* background-color: #f5f5f5; */
+  background-color: #e2bfbf;
+  padding: 20px;
+ 
+}
+.addlost {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  
+  align-items: center;
+  justify-content: center;
+}
+
+.addlost input[type="text"] {
+ 
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+  font-size: 16px;
+  
+}
+
+.addlost input[type="text"]::placeholder {
+  color: #aaa;
+}
+
+.addlost button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 142px;
+  
+ 
+}
+
+.addlost button:hover {
+  background-color: #45a049;
+ 
+}
+.addlost2 {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  
+  align-items: center;
+  justify-content: center;
+}
+
+.addlost2 input[type="text"] {
+ 
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+  font-size: 16px;
+  
+}
+
+.addlost2 input[type="text"]::placeholder {
+  color: #aaa;
+}
+
+.addlost2 button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 300px;
+  
+ 
+}
+
+.addlost button:hover {
+  background-color: #45a049;
+ 
+}
+
+.filteritem {
+  margin-bottom: 20px;
+}
+
+.filteritem h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.filteritem input[type="text"] {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  transform: translate(-23px);
+}
+
+.filteritem input[type="text"]::placeholder {
+  color: #aaa;
+}
+
+
+.stack-of-cards {
+  flex: 1;
+  padding: 20px;
+ 
+}
+
+.stack-of-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  
+}
+
+.stack-of-cards .card {
+  width: 1000px;
+  height: 150px;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  background-color: rgb(247, 225, 255);
+  padding: 10px;
+}
+
+.show-sidebar-btn {
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.show-sidebar-btn:hover {
+  background-color: #777778;
+}
+
+.sidebar-right {
+  position: relative; 
+  float: right; 
+  width: 250px;
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+/* .messagesss{
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.maaa{
+display: flex;
+flex-direction: column;
+}
+.chat {
+display: flex;
+} */
+
+
+
+
+/* Sidebar container */
+/* .sidebar-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  background-color: #f0f0f0;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  font-family: 'Roboto', sans-serif;
+} */
+
+/* Sidebar container */
+.sidebar-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  background-color: #ca8bdb;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Sidebar content */
+.sidebar-content {
+  padding: 20px;
+}
+
+/* Title */
+.sidebar-content h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'Pacifico', cursive;
+  color: #333;
+}
+
+/* Form container */
+.formmm {
+  margin-bottom: 20px;
+}
+
+/* Form */
+.sidebar-content form {
+  display: flex;
+  align-items: center;
+}
+
+/* Input field */
+.sidebar-content input[type="text"] {
+  width: calc(100% - 90px);
+  padding: 12px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: #f5f5f5;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Submit button */
+.sidebar-content button[type="submit"] {
+  padding: 12px 24px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.sidebar-content button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Messages and Rooms columns */
+.messages-column,
+.rooms-column {
+  flex: 1;
+}
+
+/* Chat messages */
+.chat-messages {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  overflow-y: scroll;
+  gap: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  max-height: 200px; /* Adjust as needed */
+}
+
+/* Heading style */
+.messages-column h3 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Pacifico', cursive;
+  color: #333;
+}
+
+/* Message style */
+.chat-messages .message {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #e5f5e9;
+  border-radius: 8px;
+}
+
+.chat-messages .message p {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Sender name style */
+.chat-messages .message .sender {
+  font-weight: bold;
+}
+
+/* Close button style */
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 8px 16px;
+  background-color: #ff5733;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.close-button:hover {
+  background-color: #ff4500;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5; /* Background color for the entire page */
+}
+
+.login-container {
+  width: 400px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-head {
+  text-align: center;
+  font-size: 24px;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+.login-head span {
+  color: #007bff; /* Color for ChatApp text */
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.loginformmore {
+  margin-bottom: 20px;
+}
+
+.labeeel, .labelllll {
+  display: block;
+  margin-bottom: 5px;
+  color: #333333;
+}
+
+.saaaan, .label-text {
+  font-weight: bold;
+}
+
+.login-input, .labelllll-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.liink {
+  margin-top: 10px;
+  display: block;
+  text-align: center;
+  color: #007bff;
+}
+
+.boton {
+  text-align: center;
+}
+
+.boton-botton {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.boton-botton:hover {
+  background-color: #0056b3; /* Darker shade of the primary color on hover */
+}
+
+.loading {
+  border: 4px solid #f3f3f3; /* Light grey */
+  border-top: 4px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.signup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5; /* Background color for the entire page */
+}
+
+.signup-container {
+  width: 400px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.signup-head {
+  text-align: center;
+  font-size: 24px;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+.signup-head-span {
+  color: #007bff; /* Color for ChatApp text */
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-fhead, .signup-more {
+  margin-bottom: 20px;
+}
+
+.sign-label, .more-label, .more-morelabel, .more-squarelabel {
+  display: block;
+  margin-bottom: 5px;
+  color: #333333;
+}
+
+.signup-form-span, .signup-more-span, .more-span, .more-sqaurespan {
+  font-weight: bold;
+}
+
+.labael-sign-input, .more-input, .more-moreinput, .more-sqaureinput {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.signup-link {
+  margin-top: 10px;
+  display: block;
+  text-align: center;
+  color: #007bff;
+}
+
+.signup-btn {
+  text-align: center;
+}
+
+.btn-btn {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-btn:hover {
+  background-color: #0056b3; /* Darker shade of the primary color on hover */
+}
+
+.signup-loading {
+  border: 4px solid #f3f3f3; /* Light grey */
+  border-top: 4px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

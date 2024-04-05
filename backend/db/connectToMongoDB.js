@@ -1,17 +1,9 @@
-
-import { connect, model } from "mongoose";
+import mongoose from "mongoose";
 
 const connectToMongoDB = async () => {
 	try {
-		const mongoUrl =
-  "mongodb+srv://ravindersingh74123:ravindersingh74123@cluster0.kakucbp.mongodb.net/test4";
-
-connect(mongoUrl, {
-    useNewUrlParser: true,
-  })
- 
-  
-		
+		console.log(process.env.MONGODB_URL)
+		await mongoose.connect(process.env.MONGODB_URL);
 		console.log("Connected to MongoDB");
 	} catch (error) {
 		console.log("Error connecting to MongoDB", error.message);

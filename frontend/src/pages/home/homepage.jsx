@@ -54,6 +54,9 @@ function App() {
     if(cardNumber==3){
       navigate("/server3");
     }
+    if(cardNumber==4){
+      navigate("/server4");
+    }
    
 
   };
@@ -80,7 +83,7 @@ function App() {
         
         
         <div className="ptani2">
-        <div className="server" onClick={() => handleCardClick(3) }>EventVista</div>
+        <div className="server" onClick={() => handleCardClick(3) }>Resell</div>
         <div className="server" onClick={() => handleCardClick(4) }>ThisisBusiness</div>
         </div>
         

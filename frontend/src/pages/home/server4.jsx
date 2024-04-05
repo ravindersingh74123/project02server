@@ -1,5 +1,4 @@
 
-
 import React, { useEffect, useMemo, useState } from "react";
 import axios from "axios";
 import LogoutButton from "../../components/sidebar/LogoutButton";
@@ -7,6 +6,7 @@ import { io } from "socket.io-client";
 
 const App = () => {
   const [newCardContent, setNewCardContent] = useState("");
+  const [date, setdate] = useState("");
   const [cards, setCards] = useState([]);
   const [filterText, setFilterText] = useState("");
   const [showSidebar, setShowSidebar] = useState(false);
@@ -16,13 +16,12 @@ const App = () => {
   const [socket, setSocket] = useState(null);
   const [messageInput, setMessageInput] = useState("");
   const [chatRoomName, setChatRoomName] = useState("");
-  const [image, setImage] = useState(null);
-  const [price, setprice] = useState("");
+ 
 
   useEffect(() => {
     console.log("hi");
     axios
-      .get("http://localhost:5000/resell")
+      .get("http://localhost:5000/business")
       .then((response) => {
         setCards(response.data.todos || []);
       })
@@ -57,27 +56,29 @@ const App = () => {
   const handleInputChange = (event) => {
     setNewCardContent(event.target.value);
   };
-  const handlePriceChange = (event) => {
-    setprice(event.target.value);
+  const handleDateChange = (event) => {
+    setdate(event.target.value);
   };
 
   const handleAddCard = async () => {
     const formData = new FormData();
-    formData.append("image", image);
-    formData.append("title", newCardContent);
-    formData.append("name", userData.username);
-    formData.append("price", price);
+   
+    
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/server1/resell",
-        formData
+        "http://localhost:5000/server1/business",{
+          businessName:newCardContent,
+          user:userData.username,
+          details:date
+        }
+        
       );
       alert("Todo added");
       setCards((prevCards) => [...prevCards, response.data]);
       setNewCardContent("");
-      setImage(null);
-      setprice("")
+      setdate("");
+      
     } catch (error) {
       console.error("Error adding card:", error);
     }
@@ -118,23 +119,21 @@ const App = () => {
     return cards.filter((card) => {
       if (
         card &&
-        typeof card.title === "string" &&
-        typeof card.name === "string" &&
-        typeof card.price === "string"
+        typeof card.businessName === "string" &&
+        typeof card.user === "string" &&
+        typeof card.details === "string"
       ) {
         return (
-          card.title.toLowerCase().includes(filterText.toLowerCase()) ||
-          card.name.toLowerCase().includes(filterText.toLowerCase()) ||
-          card.price.toLowerCase().includes(filterText.toLowerCase())
+          card.businessName.toLowerCase().includes(filterText.toLowerCase()) ||
+          card.user.toLowerCase().includes(filterText.toLowerCase())||
+          card.details.toLowerCase().includes(filterText.toLowerCase())
         );
       }
       return false;
     });
   }, [cards, filterText]);
 
-  const onInputChange = (e) => {
-    setImage(e.target.files[0]);
-  };
+  
 
   return (
     <div>
@@ -143,26 +142,26 @@ const App = () => {
           <div>
             <LogoutButton />
           </div>
-          <h2>Post Your Items</h2>
-          <div className="addlost">
+          <h2>Post Business Details</h2>
+          <div className="addlost2">
             <div>
               <input
                 type="text"
                 className="papa"
-                placeholder="Enter details"
+                placeholder="Enter Business name"
                 value={newCardContent}
                 onChange={handleInputChange}
               />
-               <input
+              <input
                 type="text"
                 className="papa"
-                placeholder="Enter price"
-                value={price}
-                onChange={handlePriceChange}
+                placeholder="Enter details"
+                value={date}
+                onChange={handleDateChange}
               />
             </div>
-            <div className="jai">
-              <form className="photo">
+            <div className="jai2">
+              {/* <form className="photo">
                 <label htmlFor="file-upload" className="custom-file-input">
                   ADD PHOTO
                 </label>
@@ -173,13 +172,13 @@ const App = () => {
                   onChange={onInputChange}
                   className="hidden-input"
                 />
-              </form>
-              <button onClick={handleAddCard}>ADD ITEM</button>
+              </form> */}
+              <button className="jai3" onClick={handleAddCard}>ADD DETAILS</button>
             </div>
           </div>
 
           <div className="filteritem">
-            <h2>Find Items</h2>
+            <h2>Search Business</h2>
             <input
               className="filmeba"
               type="text"
@@ -192,23 +191,18 @@ const App = () => {
 
         <div className="stack-of-cards">
           <div className="post">
-            <h2>SellME</h2>
+            <h2>TravelMania</h2>
           </div>
           <div className="card-container">
+           
             {filteredCards.map((card, index) => (
               <div key={index} className="card">
-                {card.image && (
-                  <img
-                    src={`http://localhost:5000/images/${card.image}`}
-                    alt={`Image ${index}`}
-                    height={150}
-                    width={200}
-                  />
-                )}
-                <p className="user-info">User: {card.name}</p>
+                
+                <p className="user-info">User: {card.user}</p>
+                <p className="lost-item">BusinessName: {card.businessName}</p>
+                <p className="user-info">Details: {card.details}</p>
                
-                <p className="lost-item"> Item: {card.title}</p>
-                <p className="user-info">price: {card.price}</p>
+                {console.log(card.user)}
                 <button
                   className="chat-button"
                   onClick={() => handleOpenChat(index)}

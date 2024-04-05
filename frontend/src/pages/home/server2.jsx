@@ -22,7 +22,7 @@ const App = () => {
   useEffect(() => {
     console.log("hi");
     axios
-      .get("http://localhost:5000/todos")
+      .get("http://localhost:5000/travel")
       .then((response) => {
         setCards(response.data.todos || []);
       })
@@ -68,7 +68,7 @@ const App = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/server1/todo",{
+        "http://localhost:5000/server1/travel",{
           destination:newCardContent,
           user:userData.username,
           date:date

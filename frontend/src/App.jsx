@@ -7,6 +7,7 @@ import SignUp from "./pages/signup/SignUp";
 import Server1 from "./pages/home/server1";
 import Server2 from "./pages/home/server2";
 import Server3 from "./pages/home/server3";
+import Server4 from "./pages/home/server4";
 import { Toaster } from "react-hot-toast";
 import { useAuthContext } from "./context/AuthContext";
 
@@ -20,6 +21,7 @@ function App() {
 				<Route path='/server1' element={ authUser ? <Server1 /> : <Navigate to={"/login"} />} />
 				<Route path='/server2' element={ authUser ? <Server2 /> : <Navigate to={"/login"} />} />
 				<Route path='/server3' element={ authUser ? <Server3 /> : <Navigate to={"/login"} />} />
+				<Route path='/server4' element={ authUser ? <Server4 /> : <Navigate to={"/login"} />} />
 				<Route path='/login' element={authUser ? <Navigate to='/' /> : <Login />} />
 				<Route path='/signup' element={authUser ? <Navigate to='/' /> : <SignUp />} />
 				
